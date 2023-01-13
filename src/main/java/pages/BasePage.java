@@ -18,4 +18,7 @@ public class BasePage {
     public void waitVisibility(By by){
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
     }
+    public void thisMethodIsNotDoingAnything(){
+        //Samo da vas poremetim
+    }
 }
