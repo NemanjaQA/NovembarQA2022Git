@@ -32,11 +32,18 @@ public class BasePage {
     public void writeText(By elementBy, String text){
             waitVisibility(elementBy);
             driver.findElement(elementBy).clear();
-            driver.findElement(elementBy).sendKeys();
+            driver.findElement(elementBy).sendKeys(text);
     }
     public void assertStringEquals(String actualText, String expectedText){
         Assert.assertEquals(actualText,expectedText);
 
+    }
+    public boolean isElementNotDisplayed(By elementBy){
+        if (driver.findElements(elementBy).size()>0) {
+            return false;}
+            else {
+                return true;
+        }
     }
     public void thisMethodIsNotDoingAnything(){
         //Samo da vas poremetim
